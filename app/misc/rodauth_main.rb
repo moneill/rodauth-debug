@@ -28,19 +28,6 @@ class RodauthMain < Rodauth::Rails::Auth
     login_label "Email Address"
     login_button "Log In"
 
-    # See https://github.com/jeremyevans/rodauth/commit/ed3591238f3e0faaa447e23bf8a08f40a1641058
-    # active_sessions_insert_hash do
-    #   default_attributes = super()
-    #   default_attributes.merge(
-    #     ip_address: request.ip,
-    #     user_agent: request.user_agent
-    #   )
-    # end
-
-    #update_current_session? true
-    #session_inactivity_deadline nil
-    #session_lifetime_deadline 1.year.to_i
-
     # Specify the controller used for view rendering, CSRF, and callbacks.
     rails_controller { RodauthController }
 
